@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vi phẫu</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/microsurgery.css" />
+    <link rel="stylesheet" href="/font/Agrandir-WideBlackItalic.otf">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/22de35541d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <%- include('../include/navbar.ejs',{title : "Vi phẫu" }) %>
+            <div class="content">
+                <div class="sidebar" style="position: fixed;left: 0;top: 70px;">
+                    <%- include('../include/sidebar.ejs') -%>
+                </div>
+                <div class="content-desc">
+                    <%data.forEach(function(result){%>
+                        <div class="adscendens-part">
+                            <%result.forEach(function(item){%>
+                                <%if(item.type==='3' ){%>
+                                    <div class="adscendens-part-desc-3">
+                                        <img src="/upload/viphau/<%=item.img%>" alt="">
+                                        <p>
+                                            <%=item.textImg%>
+                                        </p>
+                                        <p>
+                                            <%=item.cmt%>
+                                        </p>
+                                    </div>
+                                    <%} else if(item.type==='2' ) {%>
+                                        <div class="adscendens-part-desc-2">
+                                            <img src="/upload/viphau/<%=item.img%>" alt="">
+                                            <p>
+                                                <%=item.textImg%>
+                                            </p>
+                                            <p>
+                                                <%=item.cmt%>
+                                            </p>
+                                        </div>
+                                    <%} else {%>
+                                        <div class="adscendens-part-desc-1">
+                                            <img src="/upload/viphau/<%=item.img%>" alt="">
+                                            <p>
+                                                <%=item.textImg%>
+                                            </p>
+                                            <p>
+                                                <%=item.cmt%>
+                                            </p>
+                                        </div>
+                                    <%}%>
+                            <%})%>
+                        </div>
+                    <%})%>
+                </div>
+            </div>
+    </div>
+    <script>
+        const listTagA = document.getElementsByClassName('link-reference')
+        for (let index = 0; index < listTagA.length; index++) {
+            listTagA[index].setAttribute("target", "_blank")
+        }
+    </script>
+</body>
+
+</html>

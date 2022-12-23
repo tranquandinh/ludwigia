@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludgiwia</title>
+    <script src="https://kit.fontawesome.com/22de35541d.js" crossorigin="anonymous"></script>
+    <link href="http://fonts.cdnfonts.com/css/gagalin" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/home.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="infor">
+            <h1>LUDWIGIA</h1>
+            <b>Tra cứu khoa học - Thông tin tin cậy - Tham khảo dễ dàng</b>
+            <div class="search_div">
+                <input list="results" type="text" class="search-input" placeholder="Nhập thông tin loài cần tìm" />
+                <datalist id="results">
+                    <option value="Ludgiwia adscendens">
+                </datalist>
+                <a type="submit" class="search-button" href="/introduction"><i
+                        class="fa-sharp fa-solid fa-magnifying-glass"></i></a>
+            </div>
+            <ul class="link_div">
+                <li id="gioithieu" style="background-image: url(./upload/lienhe.png);">
+                    <a href="/introduction/page"><strong>Giới thiệu chung</strong></a>
+                </li>
+                <li id="lienhe" id="gioithieu" style="background-image: url(./upload/lienhe.png);">
+                    <a href="mailto:thudatdl123@gmail.com"><strong>Liên hệ</strong></a>
+                </li>
+            </ul>
+        </div>
+
+        <img src="./upload/home.png" alt="">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const listTagA = document.getElementsByClassName('link-reference')
+        for (let index = 0; index < listTagA.length; index++) {
+            listTagA[index].setAttribute("target", "_blank")
+        }
+    </script>
+</body>
+
+</html>
